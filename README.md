@@ -2,4 +2,4 @@
 
 ## [WIP] - NO MOBILE VIEW - ONLY DESKTOP
 
-## LIVE - https://seances-locales-client.vercel.app/)https://seances-locales-client.vercel.app/
+## LIVE - https://seances-locales-client.vercel.app/
