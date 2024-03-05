@@ -1,17 +1,6 @@
-export const cinema = [
-	{
-		name: 'Cinema A',
-	},
-	{
-		name: 'Cinema B',
-	},
-	{
-		name: 'Cinema C',
-	},
-	{
-		name: 'Cinema E',
-	},
-	{
-		name: 'Cinema Z',
-	},
+import { sessions } from './sessions';
+
+const uniqueCinemaNames = [
+	...new Set(sessions.map((session) => session.cinema.name)),
 ];
+export const cinema = uniqueCinemaNames.map((name) => ({ name }));

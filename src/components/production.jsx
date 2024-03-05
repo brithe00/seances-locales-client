@@ -1,17 +1,6 @@
-export const production = [
-	{
-		name: '2024',
-	},
-	{
-		name: '2023',
-	},
-	{
-		name: '2000',
-	},
-	{
-		name: '2020',
-	},
-	{
-		name: '2005',
-	},
+import { sessions } from './sessions';
+
+const uniqueReleaseDate = [
+	...new Set(sessions.map((session) => session.movie.releaseDate)),
 ];
+export const production = uniqueReleaseDate.map((name) => ({ name }));

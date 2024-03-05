@@ -8,6 +8,7 @@ import {
 	getFilteredRowModel,
 	getFacetedRowModel,
 	getFacetedUniqueValues,
+	getPaginationRowModel,
 } from '@tanstack/react-table';
 
 import {
@@ -20,6 +21,7 @@ import {
 } from './ui/table';
 
 import DataTableToolbar from './data-table-toolbar';
+import DataTablePagination from './data-table-pagination';
 
 const DataTable = ({ columns, data }) => {
 	const [columnVisibility, setColumnVisibility] = useState({});
@@ -44,6 +46,7 @@ const DataTable = ({ columns, data }) => {
 		getSortedRowModel: getSortedRowModel(),
 		getFacetedRowModel: getFacetedRowModel(),
 		getFacetedUniqueValues: getFacetedUniqueValues(),
+		getPaginationRowModel: getPaginationRowModel(),
 	});
 	return (
 		<div className="space-y-4">
@@ -97,6 +100,9 @@ const DataTable = ({ columns, data }) => {
 						)}
 					</TableBody>
 				</Table>
+			</div>
+			<div className="flex items-center justify-end space-x-2 py-4">
+				<DataTablePagination table={table} />
 			</div>
 		</div>
 	);
